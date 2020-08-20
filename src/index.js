@@ -1,21 +1,15 @@
 import './style.scss';
 
 (() => {
-
-  const checkboxes = document.querySelectorAll('.checkbox');
+  const checkboxes = document.querySelectorAll('.checkbox__item');
 
   checkboxes.forEach((item) => {
-    const checkboxItem = item.querySelector('.checkbox__item');
-
-    checkboxItem.addEventListener('change', (evt) => {
-      const otherCheckboxes = [...checkboxes].filter((el) => el.querySelector('.checkbox__item') !== checkboxItem);
+    item.addEventListener('change', (evt) => {
+      const otherCheckboxes = [...checkboxes].filter((el) => el !== item);
 
       otherCheckboxes.forEach((arrEl) => {
-        const item = arrEl.querySelector('.checkbox__item');
-
-        item.checked = Math.random() > .5;
+        arrEl.checked = Math.random() > .6;
       });
     });
   });
-
 })();
