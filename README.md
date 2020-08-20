@@ -1,21 +1,4 @@
-# Template for FrontLoops [Elements] challenge
+# Random switches
 
-Install all dependencies
-```bash
-npm i
-```
-
-For start watching all files use:
-```bash
-npm run start
-```
-
-then open in browser
-```bash
-http://localhost:1234/
-```
-
-For build all files use:
-```bash
-npm run build
-```
+Create several switcher elements.
+Whenever you change any of them - all other switchers must randomly change their state.
